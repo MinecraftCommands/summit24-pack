@@ -2,3 +2,9 @@
 
 summit_24_data_pack.zip
 summit_24_resource_pack.zip
+
+*.txt
+
+minecraftcommands/data/mcc/gen
+minecraftcommands/data/mcc/show
+minecraftcommands/data/mcc/spawn
