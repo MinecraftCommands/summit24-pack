@@ -1,6 +1,4 @@
 
-tellraw @a {"text":"running spawn 2"}
-
 kill @e[tag=mcc.display]
 
 execute positioned ~3 ~ ~ run function mcc:anim/with_context/spawn_stair_step {layer:1,base:[4.5,0.0,0.0]}
