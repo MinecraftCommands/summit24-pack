@@ -1,0 +1,2 @@
+
+$data modify block 6 -37 83 front_text.messages set value ['[{"text":"<   ","clickEvent":{"action":"run_command","value":"function mcc:menu/update_sign"}}, $(t1) ,{"text":"   >"}]', '$(t2)', '$(t3)', '$(t4)']
