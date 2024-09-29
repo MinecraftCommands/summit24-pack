@@ -7,7 +7,7 @@
 #server : 30 83 15
 scoreboard players set X mcc.MENU 30000
 scoreboard players set Y mcc.MENU 83000
-scoreboard players set Z mcc.MENU 15000
+scoreboard players set Z mcc.MENU -15000
 
 
 

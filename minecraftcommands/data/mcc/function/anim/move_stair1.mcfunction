@@ -1,5 +1,4 @@
 
-
 function mcc:anim/with_context {f:"spawn_stair1"}
 function mcc:anim/with_context {f:"remove_stairs"}
 
