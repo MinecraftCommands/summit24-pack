@@ -20,7 +20,6 @@ scoreboard players set ACC CONST 1000
 scoreboard players set BASE_UNIX mcc.VAR 1725746400
 scoreboard players set OFFSET_UNIX mcc.VAR 0
 scoreboard players set DAY_OFFSET_UNIX mcc.VAR 0
-scoreboard players add SERVER mcc.VAR 0
 
 
 scoreboard players add STAIR_STATE mcc.VAR 0
