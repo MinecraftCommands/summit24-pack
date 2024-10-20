@@ -1,7 +1,6 @@
 
 #Sign hitboix is weird : offset 125 from the wall, top coords : 780, down coord : 280
 
-#TODO get menu coords from storage
 
 #solo : 6 -37 83
 #server : 30 83 15
@@ -38,12 +37,8 @@ execute store result score DY mcc.VEC run data get storage temp Pos[1] 1000
 execute store result score DZ mcc.VEC run data get storage temp Pos[2] 1000
 scoreboard players operation DY mcc.VEC += EYES CONST
 
-#TODO grab a temp entity somewhere and do that based on uuid
-summon marker ~ ~ ~ {Tags:[m]}
-#execute positioned ^ ^ ^1 as @e[tag=m] run tp ~ ~ ~
-execute positioned ^ ^ ^1 summon minecraft:marker run data modify storage temp Pos set from entity @s Pos
-#data modify storage temp Pos set from entity @e[tag=m,limit=1] Pos
-kill @e[type=marker]
+execute positioned ^ ^ ^1 summon minecraft:marker run function mcc:menu/sentity
+
 
 execute store result score VX mcc.VEC run data get storage temp Pos[0] 1000
 execute store result score VY mcc.VEC run data get storage temp Pos[1] 1000

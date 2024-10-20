@@ -1,2 +1,1 @@
-
-fill ~3 ~ ~7 ~8 ~4 ~9 air
+fill 25 75 -1 34 81 0 air replace minecraft:warped_stairs

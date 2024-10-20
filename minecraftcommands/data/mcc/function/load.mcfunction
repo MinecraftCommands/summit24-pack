@@ -30,7 +30,14 @@ scoreboard players set RUN_MODE mcc.DG 1
 scoreboard players set IS_RUNNING mcc.DG 0
 
 scoreboard players add DISPLAY mcc.MENU 0
-scoreboard players set DISPLAY_MOD mcc.MENU 5
+scoreboard players set DISPLAY_MOD mcc.MENU 6
+scoreboard players set MAX_PLAYER mcc.MENU -1
+scoreboard players add SELECTED_GAME mcc.MENU 0
+scoreboard players set SELECTED_GAME_MOD mcc.MENU 6
+scoreboard players add GAME_CD mcc.MENU 0
+scoreboard players set GAME_CD_SETTING mcc.MENU 80
+scoreboard players add GAME_LAST_GT mcc.MENU 0
+
 
 scoreboard players add SCREEN_X mcc.MENU 0
 scoreboard players add SCREEN_Y mcc.MENU 0
@@ -38,9 +45,17 @@ scoreboard players add SCREEN_Y mcc.MENU 0
 scoreboard players add COUNTER mcc.MENU 0
 scoreboard players add COUNTER_MAX mcc.MENU 0
 scoreboard players add COUNTER_POS mcc.MENU 0
-scoreboard players add COUNTER_SIZE mcc.MENU 0
-scoreboard players add COUNTER_CROSS mcc.MENU 0
+scoreboard players add COUNTER_POSY mcc.MENU 0
+
 scoreboard players add COUNTER_CD mcc.MENU 0
 
 scoreboard players add COUNTER_CROSS mcc.MENU 0
 
+
+
+team add mcc.seker
+team modify mcc.seker color dark_purple
+
+kill @e[tag=mcc.puff]
+
+summon minecraft:item_display 30.4375 86.00 -15.55 {Tags:[mcc,mcc.puff],item:{id:pufferfish,count:1},transformation: {left_rotation: [-0.1478094f, 0.9890159f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 0.99999976f, 0.99999976f]}}

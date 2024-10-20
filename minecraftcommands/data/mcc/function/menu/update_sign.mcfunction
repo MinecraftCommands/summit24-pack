@@ -1,5 +1,9 @@
 
-execute at @s run function mcc:menu/get_coords
+scoreboard players set SIGN_X mcc.MENU -1
+scoreboard players set SIGN_Y mcc.MENU -1
+
+execute if entity @s at @s run function mcc:menu/get_coords
+execute unless entity @s run scoreboard players set SIGN_X mcc.MENU -1
 
 scoreboard players set DELTA mcc.MENU 0
 
@@ -20,14 +24,15 @@ execute if score DISPLAY mcc.MENU matches 0 run data modify block 30 83 -15 fron
 
 #execute if score DISPLAY mcc.MENU matches 0 run function mcc:menu/update_sign_macro {t1:'"Cursor"',t2:{"score":{"name":"SIGN_X","objective":"mcc.MENU"}},t3:{"score":{"name":"SIGN_Y","objective":"mcc.MENU"}},t4:'""'}
 
-tag @s add self
-execute if score DISPLAY mcc.MENU matches 0 run function mcc:menu/update_sign_macro {t1:'"Players"',t2:'{"selector":"@a[tag=self]"}',t3:'{"selector":"@n[type=player,tag=!self]"}',t4:'{"selector":"@a[tag=!self,sort=furthest,limit=1]"}'}
-tag @a remove self
+execute if score DISPLAY mcc.MENU matches 0 run function mcc:menu/update_sign_macro {t1:'[{"text":"MCC","color":"#00aced","bold":true}]',t2:'[{"text":"","bold":true},{"text":" M","color":"red"},{"text":"a","color":"gold"},{"text":"g","color":"yellow"},{"text":"i","color":"green"},{"text":"c","color":"blue"},{"text":"a","color":"dark_purple"},{"text":"l","color":"light_purple"}]',t3:'"Sign"',t4:'"[Try me]"'}
+
+execute if score DISPLAY mcc.MENU matches 0 if score SIGN_Y mcc.MENU matches ..300 run playsound minecraft:entity.puffer_fish.blow_up neutral @s ~ ~ ~
 
 execute if score DISPLAY mcc.MENU matches 1 store result score NB mcc.VAR if entity @a
 execute if score DISPLAY mcc.MENU matches 1 store result score NBE mcc.VAR if entity @e
-#TODO grab max number of players somewhere
-execute if score DISPLAY mcc.MENU matches 1 run function mcc:menu/update_sign_macro {t1:'"Online"',t2:[{"text":"Players : "},{"score":{"name":"NB","objective":"mcc.VAR"}}],t3:'[{"text":"Entities : "},{"score":{"name":"NBE","objective":"mcc.VAR"}}]',t4:'[{"text":"Max : "},{"score":{"name":"NB_MAX","objective":"mcc.VAR"}}]'}
+scoreboard players operation MAX_PLAYER mcc.MENU > NB mcc.VAR
+
+execute if score DISPLAY mcc.MENU matches 1 run function mcc:menu/update_sign_macro {t1:'"Online"',t2:[{"text":"Players : "},{"score":{"name":"NB","objective":"mcc.VAR"}}],t3:'[{"text":"Entities : "},{"score":{"name":"NBE","objective":"mcc.VAR"}}]',t4:'[{"text":"Max : "},{"score":{"name":"MAX_PLAYER","objective":"mcc.MENU"}}]'}
 
 
 execute if score DISPLAY mcc.MENU matches 2 run function mcc:menu/time/update
@@ -43,3 +48,6 @@ execute if score DISPLAY mcc.MENU matches 4 if score SIGN_X mcc.MENU matches ..3
 
 execute if score DISPLAY mcc.MENU matches 4 run function mcc:menu/draw_image
 execute if score DISPLAY mcc.MENU matches 4 run function mcc:menu/update_sign_macro_special with storage mcc menu.screen
+
+
+execute if score DISPLAY mcc.MENU matches 5 run function mcc:menu/game/update

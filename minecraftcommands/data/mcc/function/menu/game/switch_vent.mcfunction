@@ -1,0 +1,1 @@
+function mcc:anim/open_vent
