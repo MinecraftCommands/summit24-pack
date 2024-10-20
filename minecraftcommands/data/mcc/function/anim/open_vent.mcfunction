@@ -1,2 +1,2 @@
 
-function mcc:anim/with_context {f:"open"}
+function mcc:anim/with_context {f:"open_close_randomly"}
