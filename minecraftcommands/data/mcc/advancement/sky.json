@@ -1,0 +1,21 @@
+{
+    "criteria": {
+      "interact": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:sheep",
+            "nbt": "{Tags:[\"mcc.sky.sheep\"]}"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "interact"
+      ]
+    ],
+    "rewards": {
+      "function": "mcc:inter/sky"
+    }
+  }

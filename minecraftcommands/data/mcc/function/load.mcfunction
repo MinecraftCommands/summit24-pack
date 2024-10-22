@@ -2,7 +2,7 @@
 
 # Each command goes on a separate line and they run one after each other
 
-say Your pack has been loaded!
+#say Your pack has been loaded!
 
 scoreboard objectives add CONST dummy
 scoreboard objectives add mcc.VAR dummy
@@ -37,6 +37,7 @@ scoreboard players set SELECTED_GAME_MOD mcc.MENU 6
 scoreboard players add GAME_CD mcc.MENU 0
 scoreboard players set GAME_CD_SETTING mcc.MENU 80
 scoreboard players add GAME_LAST_GT mcc.MENU 0
+scoreboard players add PUFF_CLICK mcc.MENU 0
 
 
 scoreboard players add SCREEN_X mcc.MENU 0
@@ -52,9 +53,9 @@ scoreboard players add COUNTER_CD mcc.MENU 0
 scoreboard players add COUNTER_CROSS mcc.MENU 0
 
 
-
-team add mcc.seker
-team modify mcc.seker color dark_purple
+#No Glowing :(
+#team add mcc.seker
+#team modify mcc.seker color dark_purple
 
 kill @e[tag=mcc.puff]
 

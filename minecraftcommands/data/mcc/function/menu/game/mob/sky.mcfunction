@@ -1,2 +1,2 @@
 
-summon minecart ~ ~ ~ {Invulnerable:1b,Tags:[mcc.sky,mcc.mob,mcc.sky.sheep],Passengers:[{Invulnerable:1b,Tags:[mcc.sky,mcc.mob,mcc.sky.minecart],id:minecart,Passengers:[{Invulnerable:1b,id:sheep,Tags:[mcc.sky,mcc.mob,mcc.sky.sheep]}]}]}
+summon minecart ~ ~ ~ {Invulnerable:1b,Tags:[mcc.sky,mcc.mob,mcc.sky.minecart,mcc.sky.minecart.base],Passengers:[{Invulnerable:1b,Tags:[mcc.sky,mcc.mob,mcc.sky.minecart],id:minecart,Passengers:[{Invulnerable:0b,id:sheep,DeathLootTable:"minecraft:empty",Health:2048.0f,attributes:[{id:"minecraft:generic.max_health",base:1024d}],Tags:[mcc.sky,mcc.mob,mcc.sky.sheep]}]}]}

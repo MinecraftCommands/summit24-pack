@@ -1,0 +1,21 @@
+{
+    "criteria": {
+      "interact": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:interaction",
+            "nbt": "{Tags:[\"mcc.bot\"]}"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "interact"
+      ]
+    ],
+    "rewards": {
+      "function": "mcc:inter/bot"
+    }
+  }
