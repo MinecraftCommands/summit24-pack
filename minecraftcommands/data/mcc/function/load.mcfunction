@@ -48,6 +48,8 @@ scoreboard players add COUNTER_MAX mcc.MENU 0
 scoreboard players add COUNTER_POS mcc.MENU 0
 scoreboard players add COUNTER_POSY mcc.MENU 0
 
+execute if score COUNTER_MAX mcc.MENU matches 0 run function mcc:menu/counter/count
+
 scoreboard players add COUNTER_CD mcc.MENU 0
 
 scoreboard players add COUNTER_CROSS mcc.MENU 0

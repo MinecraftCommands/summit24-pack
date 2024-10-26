@@ -17,8 +17,8 @@ execute store result storage mcc macro.screen_counter.x int 1 run scoreboard pla
 execute store result storage mcc macro.screen_counter.y int 1 run scoreboard players get TARGET_POSY mcc.MENU
 
 data modify storage mcc screen.shape set value "_"
-function mcc:menu/counter/macro with storage mcc macro.screen_counter
-execute if score TARGET_POSX mcc.MENU matches 0.. if score TARGET_POSY mcc.MENU matches 0.. run function mcc:menu/macro
+
+execute if score TARGET_POSX mcc.MENU matches 0.. if score TARGET_POSY mcc.MENU matches 0.. run function mcc:menu/counter/macro with storage mcc macro.screen_counter
 
 execute if data storage mcc {screen:{shape:"□"}} run scoreboard players add COUNTER mcc.MENU 1
 execute if data storage mcc {screen:{shape:"x"}} run scoreboard players set COUNTER mcc.MENU 0
