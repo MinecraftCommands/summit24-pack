@@ -1,11 +1,13 @@
 
 function mcc:menu/game/reset_other_games
 
-execute if score SELECTED_GAME mcc.MENU matches 0..2 run function mcc:menu/game/mob/add_containement
+#execute if score SELECTED_GAME mcc.MENU matches 0..2 run function mcc:menu/game/mob/add_containement
 
 execute if score SELECTED_GAME mcc.MENU matches 0 positioned 30 74 -9 run function mcc:menu/game/mob/panda
 execute if score SELECTED_GAME mcc.MENU matches 1 positioned 30 74 -9 run function mcc:menu/game/mob/sky
 execute if score SELECTED_GAME mcc.MENU matches 2 positioned 30 74 -9 run function mcc:menu/game/mob/seker
+
+execute if score SELECTED_GAME mcc.MENU matches 0..2 run schedule function mcc:menu/game/recenter_mob 10s
 execute if score SELECTED_GAME mcc.MENU matches 3 run function mcc:menu/game/switch_vent
 execute if score SELECTED_GAME mcc.MENU matches 4 run function mcc:anim/switch_stair
 execute if score SELECTED_GAME mcc.MENU matches 5 positioned 26 82 -15 run effect give @a[dx=8,dy=2,dz=8] minecraft:levitation 1 10 true
