@@ -59,6 +59,6 @@ scoreboard players add COUNTER_CROSS mcc.MENU 0
 #team add mcc.seker
 #team modify mcc.seker color dark_purple
 
-kill @e[tag=mcc.puff]
+#kill @e[tag=mcc.puff]
 
-summon minecraft:item_display 30.4375 86.00 -15.55 {Tags:[mcc,mcc.puff],item:{id:pufferfish,count:1},transformation: {left_rotation: [-0.1478094f, 0.9890159f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 0.99999976f, 0.99999976f]}}
+#summon minecraft:item_display 30.4375 86.00 -15.55 {Tags:[mcc,mcc.puff],item:{id:pufferfish,count:1},transformation: {left_rotation: [-0.1478094f, 0.9890159f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 0.99999976f, 0.99999976f]}}
