@@ -8,7 +8,7 @@ execute store result score RANDOM_MSG mcc.VAR run random value 1..100
 
 execute if score RANDOM_MSG mcc.VAR matches 2 run tellraw @s {"text":"I'm just a normal sheep"}
 execute if score RANDOM_MSG mcc.VAR matches 3 run tellraw @s [{"text":"KILL ALL HUMAN","color":"dark_red"}]
-execute if score RANDOM_MSG mcc.VAR matches 4 run tellraw @s {"text":"How far can you make you go?"}
+execute if score RANDOM_MSG mcc.VAR matches 4 run tellraw @s {"text":"How far can you make me go?"}
 execute if score RANDOM_MSG mcc.VAR matches 6 run tellraw @s {"text":"Do you really think this hurts me?"}
 
 execute if score RANDOM_MSG mcc.VAR matches 10..12 run tellraw @s {"text":"This hit was actually so weak it healed me"}

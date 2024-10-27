@@ -19,7 +19,7 @@ scoreboard players operation DISPLAY mcc.MENU += DELTA mcc.MENU
 
 scoreboard players operation DISPLAY mcc.MENU %= DISPLAY_MOD mcc.MENU
 
-execute if score DISPLAY mcc.MENU matches 0 run data modify block 30 83 -15 front_text.messages set value ['{"text":"<    ?    >","clickEvent":{"action":"run_command","value":"function mcc:menu/update_sign"}}', '""', '""', '""']
+execute if score DISPLAY mcc.MENU matches 0 run data modify block 31 83 -15 front_text.messages set value ['{"text":"<    ?    >","clickEvent":{"action":"run_command","value":"function mcc:menu/update_sign"}}', '""', '""', '""']
 
 
 #execute if score DISPLAY mcc.MENU matches 0 run function mcc:menu/update_sign_macro {t1:'"Cursor"',t2:{"score":{"name":"SIGN_X","objective":"mcc.MENU"}},t3:{"score":{"name":"SIGN_Y","objective":"mcc.MENU"}},t4:'""'}
