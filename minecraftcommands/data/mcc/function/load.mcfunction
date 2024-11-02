@@ -17,9 +17,10 @@ scoreboard players set 86400 CONST 86400
 scoreboard players set EYES CONST 1620
 scoreboard players set ACC CONST 1000
 
-scoreboard players set BASE_UNIX mcc.VAR 1725746400
-scoreboard players set OFFSET_UNIX mcc.VAR 0
-scoreboard players set DAY_OFFSET_UNIX mcc.VAR 0
+scoreboard players set BASE_UNIX mcc.VAR 1730502000
+#Server is offset by one timezone
+scoreboard players set OFFSET_UNIX mcc.VAR 3600
+scoreboard players add DAY_OFFSET_UNIX mcc.VAR 0
 
 
 scoreboard players add STAIR_STATE mcc.VAR 0
