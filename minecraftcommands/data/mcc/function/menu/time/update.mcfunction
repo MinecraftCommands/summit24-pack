@@ -3,6 +3,7 @@
 data modify storage mcc temp.output set from block 24 72 -9 LastOutput
 data modify storage mcc temp.time set string storage mcc temp.output 10 18
 
+data modify storage mcc macro.time set value {}
 data modify storage mcc macro.time.h set string storage mcc temp.output 10 12
 data modify storage mcc macro.time.m set string storage mcc temp.output 13 15
 data modify storage mcc macro.time.s set string storage mcc temp.output 16 18

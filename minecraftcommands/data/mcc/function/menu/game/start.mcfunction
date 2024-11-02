@@ -16,7 +16,7 @@ scoreboard players operation GAME_CD mcc.MENU = GAME_CD_SETTING mcc.MENU
 execute if score SELECTED_GAME mcc.MENU matches 4 run scoreboard players operation GAME_CD mcc.MENU += GAME_CD_SETTING mcc.MENU
 execute if score SELECTED_GAME mcc.MENU matches 4 run scoreboard players operation GAME_CD mcc.MENU += GAME_CD_SETTING mcc.MENU
 scoreboard players add GAME_CD mcc.MENU 1
-execute store result storage mcc macro.time int 1 run scoreboard players get GAME_CD mcc.MENU
+execute store result storage mcc macro.time.time int 1 run scoreboard players get GAME_CD mcc.MENU
 scoreboard players remove GAME_CD mcc.MENU 1
 
-function mcc:menu/game/delay_update with storage mcc macro
+function mcc:menu/game/delay_update with storage mcc macro.time
